@@ -27,9 +27,13 @@ knn.fit(X_train, y_train) # train model using only taining data
 y_pred = knn.predict(X_test)
 
 accuracy = accuracy_score(y_test, y_pred)
+
 cm = confusion_matrix(y_test,y_pred)
+labels = data.target_names
+
+df = pd.DataFrame(cm, columns=labels, index=labels)
 print(accuracy)
-print(cm)
+print(df)
 
 
 
