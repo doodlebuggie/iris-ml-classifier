@@ -15,7 +15,6 @@ from sklearn.metrics import confusion_matrix
 data = load_iris()
 X = data.data
 y = data.target
-#shape = data.data.shape
 
 df = pd.DataFrame(X, columns=data.feature_names)
 df['species'] = y
@@ -31,7 +30,7 @@ accuracy = accuracy_score(y_test, y_pred)
 cm = confusion_matrix(y_test,y_pred)
 labels = data.target_names
 
-df = pd.DataFrame(cm, columns=labels, index=labels)
+df = pd.DataFrame(cm, columns=labels, index=labels) # columns is predicted species names. index is actual species names
 print(accuracy)
 print(df)
 
