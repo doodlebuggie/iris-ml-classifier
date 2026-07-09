@@ -10,6 +10,7 @@ from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score
+from sklearn.metrics import confusion_matrix
 
 data = load_iris()
 X = data.data
@@ -26,8 +27,9 @@ knn.fit(X_train, y_train) # train model using only taining data
 y_pred = knn.predict(X_test)
 
 accuracy = accuracy_score(y_test, y_pred)
-
+cm = confusion_matrix(y_test,y_pred)
 print(accuracy)
+print(cm)
 
 
 
