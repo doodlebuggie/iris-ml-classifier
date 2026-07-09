@@ -1,7 +1,7 @@
 # iris-ml-classifier
 
 Overview
-A machine learning classification project that predicts the species of an iris flower using measurements of its sepal and petal features.
+A machine learning classification project that predicts the species of an iris flower using measurements of its sepal and petal features. A user can input features using a basic UI. 
 
 This project uses a K-Nearest Neighbours(KNN) classifier to classify flowers into one of three species: setosa, versicolor or virginica. 
 
@@ -35,6 +35,7 @@ Python
 Pandas
 NumPy
 Scikit-learn
+Streamlit
 VS Code
 
 Project Structure
